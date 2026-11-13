@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica 3</title>
+</head>
+<body>
+  <p id="p1"></p>
+  <p id="p2"></p>
+
+  <script type="module">
+    // Importamos la función cuenta del módulo temporizador.js
+    import { cuenta } from "./temporizador.js";
+
+    const p1 = document.getElementById("p1");
+    const p2 = document.getElementById("p2");
+
+    // Primer párrafo: desde 6, de segundo en segundo
+    cuenta(6, p1, 1000);
+
+    // Segundo párrafo: desde 60, de décima en décima; al terminar escribe "Fin"
+    cuenta(60, p2, 100, () => {
+      p2.textContent = "Fin";
+    });
+  </script>
+</body>
+</html>
