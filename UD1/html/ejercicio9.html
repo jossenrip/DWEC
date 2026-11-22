@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios, ejercicio 9</title>
+</head>
+<body>
+    <h1>Formulari d'inscripció Cyberwall</h1>
+    <form>
+        <label>Name:</label><br>
+        <input type="text" placeholder="Nom i cognoms..." required><br>
+        <label>Create a user name:</label><br>
+        <input type="text" minlength="6" maxlength="12" required><br>
+        <label>Create a password:</label><br>
+        <input type="text" required><br>
+        <br>
+
+        <label>Birthday:</label>
+        <input type="date"><br>
+        <label>I am</label>
+        <select>
+            <option value="a student">a student</option>
+            <option value="a teacher">a teacher</option>
+            <option value="a business owner">a business owner</option>
+            <option value="self-employed">self-employed</option>
+            <option value="other">other</option>
+        </select><br>
+        <label>Mobile phone:</label><br>
+        <input type="text" required><br>
+        <label>Select yoour English level (0-10):</label><br>
+        <input type="range" min="0" max="10">
+        <br>
+        <button type="submit">Sign me up</button>
+    </form>
+</body>
+</html>
