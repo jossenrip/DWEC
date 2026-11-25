@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuenta atrás</title>
+</head>
+<body>
+    <script type="module">
+        import { cuenta } from "./pt3.js"
+
+        // Se crean los dos párrafos
+        let p1 = document.createElement("p")
+        let p2 = document.createElement("p")
+        document.body.appendChild(p1)
+        document.body.appendChild(p2)
+
+        // Primer párrafo: desde 6, de segundo en segundo
+        cuenta(6, p1, 1000)
+
+        // Segundo párrafo: desde 60, de décima en décima (100 ms)
+        // Al llegar a cero, el callback escribe "Fin"
+        cuenta(60, p2, 100, function(){
+            p2.textContent = "Fin"
+        })
+    </script>
+</body>
+</html>
